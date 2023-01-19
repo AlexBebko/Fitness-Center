@@ -1,0 +1,140 @@
+.benefits {
+  background-color: $color-ghost-white;
+  margin-left: 33px;
+}
+
+.benefits__wrapper {
+  max-width: 1040px;
+  min-height: 664px;
+  padding-top: 146px;
+  padding-bottom: 91px;
+}
+
+.benefits__title {
+  margin: 0;
+  margin-right: 22px;
+  margin-bottom: 55px;
+
+  text-align: center;
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+
+  color: $color-sapphire;
+}
+
+.benefits__list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-left: -16px;
+
+  display: grid;
+  grid-template-areas:
+    "empty simulators parking"
+    "comfort simulators experience";
+  grid-template-columns: 340px 240px 340px;
+  grid-template-rows: 153px 153px;
+  column-gap: 60px;
+
+  list-style: none;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    width: 340px;
+    height: 2px;
+    top: 50%;
+    background-color: $color-crimson-20;
+  }
+
+  &::after {
+    left: 0;
+  }
+
+  &::before {
+    right: 0;
+  }
+}
+
+.benefits__item {
+  &--empty {
+    grid-area: empty;
+  }
+
+  &--parking {
+    grid-area: parking;
+  }
+
+  &--comfort {
+    grid-area: comfort;
+  }
+
+  &--experience {
+    grid-area: experience;
+  }
+
+  &--simulators {
+    grid-area: simulators;
+    background-color: $color-resolution-blue;
+  }
+}
+
+@media (max-width: $tablet-max-width) {
+  .benefits {
+    margin-left: 0;
+  }
+
+  .benefits__wrapper {
+    min-height: 755px;
+    padding-top: 91px;
+    padding-bottom: 100px;
+  }
+
+  .benefits__title {
+    margin-bottom: 50px;
+
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .benefits__list {
+    margin-left: 0;
+    grid-template-areas:
+      "empty parking"
+      "simulators simulators"
+      "comfort experience";
+    grid-template-columns: 303px 317px;
+    grid-template-rows: 62px 238px 62px;
+    gap: 50px;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .benefits__wrapper {
+    width: 100%;
+    padding-top: 35px;
+    padding-bottom: 70px;
+  }
+
+  .benefits__title {
+    font-size: 32px;
+    line-height: 38px;
+    margin-right: 16px;
+  }
+
+  .benefits__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 43px;
+  }
+}

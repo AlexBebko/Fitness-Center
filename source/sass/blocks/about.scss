@@ -1,0 +1,261 @@
+.about {
+  position: relative;
+}
+
+.about__wrapper {
+  position: relative;
+  display: flex;
+  column-gap: 85px;
+  min-height: 756px;
+  padding-top: 120px;
+  padding-left: 60px;
+}
+
+.about__wrapper img {
+  width: 660px;
+  height: 401px;
+}
+
+.about__text-container {
+  max-width: 355px;
+  margin-top: 39px;
+}
+
+.about__title {
+  margin: 0;
+  margin-bottom: 7px;
+
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+  color: $color-sapphire;
+}
+
+.about__text {
+  margin: 0;
+  margin-bottom: 38px;
+
+  font-family: $ff-roboto;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+
+  color: $color-sapphire;
+}
+
+.about__description {
+  margin: 0;
+  margin-bottom: 7px;
+
+  font-family: $ff-roboto;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+
+  color: $color-sapphire;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.about__video-wrapper {
+  position: absolute;
+  width: 364px;
+  height: 228px;
+  bottom: 120px;
+  left: 436px;
+  background-image: url("../img/poster.webp");
+
+  @media (min-resolution: $retina-dppx) and (min-width: $vp-768) {
+    background: url("../img/poster@2x.webp");
+    background-size: cover;
+  }
+}
+
+.no-webp .about__video-wrapper {
+  background-image: url("../img/poster.jpg");
+
+  @media (min-resolution: $retina-dppx) and (min-width: $vp-768) {
+    background: url("../img/poster@2x.jpg");
+    background-size: cover;
+  }
+}
+
+.about__video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("../img/svg/play-button.svg") no-repeat center;
+  background-size: 100px 100px;
+  z-index: 5;
+  transition: $trans-default;
+
+  &:hover {
+    cursor: pointer;
+    background-size: 120px 120px;
+  }
+}
+
+.about__video iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: none;
+}
+
+@media (max-width: $tablet-max-width) {
+  .about__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 0;
+    min-height: 854px;
+    padding-top: 100px;
+    padding-left: 0;
+    padding-bottom: 183px;
+  }
+
+  .about__text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    max-width: 100%;
+    width: 503px;
+  }
+
+  .about__title {
+    margin: 0;
+    margin-right: 16px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .about__text {
+    margin-bottom: 34px;
+  }
+
+  .about__description-container {
+    margin-bottom: 36px;
+  }
+
+  .about__description {
+    text-align: center;
+
+    &--second-row {
+      display: none;
+    }
+  }
+
+  .about__wrapper img {
+    width: 678px;
+    height: 345px;
+  }
+
+  .about__video-wrapper {
+    bottom: 100px;
+    left: 206px;
+    width: 266px;
+    height: 167px;
+    background-size: cover;
+  }
+
+  .about__video {
+    background-size: 73px 73px;
+
+    &:hover {
+      cursor: pointer;
+      background-size: 100px 100px;
+    }
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .about__wrapper {
+    min-height: 925px;
+    padding-top: 64px;
+    padding-bottom: 70px;
+    width: 100%;
+  }
+
+  .about__text-container {
+    min-width: 290px;
+    width: 90%;
+
+    align-items: flex-start;
+  }
+
+  .about__title {
+    margin-bottom: 5px;
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .about__text {
+    margin-bottom: 24px;
+  }
+
+  .about__description-container {
+    width: 90%;
+    margin-bottom: 26px;
+  }
+
+  .about__description {
+    text-align: start;
+  }
+
+  .about__image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 97.81%;
+    margin-bottom: 40px;
+  }
+
+  .about__wrapper img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  .about__video-wrapper {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 167px;
+    padding-top: 52.25%;
+    background: url("../img/poster-mobile.webp");
+    background-size: cover;
+
+    @media (min-resolution: $retina-dppx) {
+      background: url("../img/poster-mobile@2x.webp");
+      background-size: cover;
+    }
+  }
+
+  .no-webp .about__video-wrapper {
+    background-image: url("../img/poster-mobile.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background: url("../img/poster-mobile@2x.jpg");
+      background-size: cover;
+    }
+  }
+}

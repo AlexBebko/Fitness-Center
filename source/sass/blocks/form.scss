@@ -1,0 +1,112 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.form__input-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.form__field label {
+  display: none;
+}
+
+.form__field input {
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  background-color: $color-transparent;
+  border: none;
+  border-bottom: 1px solid $color-light-slate-grey;
+
+  color: $color-default-white;
+
+  transition: $trans-default;
+  padding-left: 0;
+
+  &:hover {
+    background-color: $color-default-white;
+    color: $color-sapphire;
+
+    border-color: transparent;
+    box-shadow: 0 0 2px 2px $color-default-white;
+
+    &::placeholder {
+      color: $color-light-slate-grey;
+    }
+  }
+
+  &:focus,
+  &:focus-within {
+    background-color: $color-default-white;
+    color: $color-sapphire;
+    outline: none;
+
+    border-color: transparent;
+    box-shadow: 0 0 2px 2px $color-default-white;
+
+    &::placeholder {
+      color: $color-light-slate-grey;
+    }
+  }
+}
+
+.form__field input::placeholder {
+  font-family: $ff-roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: $color-default-white;
+}
+
+.form button {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  font-family: $ff-roboto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+
+  background-color: $color-transparent;
+  color: $color-default-white;
+
+  user-select: none;
+  cursor: pointer;
+
+  transition: $trans-default;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    background-color: $color-default-white;
+    color: $color-sapphire;
+    box-shadow: 0 0 7px 0 $color-sapphire inset, 0 0 2px 2px $color-default-white;
+  }
+
+  &:active {
+    background-color: $color-spindle;
+  }
+}
+
+@media (max-width: $tablet-max-width) {
+  .form__input-wrapper {
+    column-gap: 60px;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .form__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 31px;
+
+    margin-bottom: 10px;
+  }
+}

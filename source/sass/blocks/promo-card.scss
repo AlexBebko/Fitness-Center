@@ -1,0 +1,254 @@
+.promo-card--main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.promo-card--secondary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-style: solid;
+  border-image: $border-crimson-to-smalt 1 / 7px;
+
+  padding-top: 30px;
+  padding-left: 32px;
+  padding-bottom: 34px;
+}
+
+.promo-card__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 45px;
+  padding-top: 41px;
+  padding-bottom: 46px;
+
+  background-color: $color-torch-red;
+}
+
+.promo-card--main .promo-card__title {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+
+  font-family: $ff-roboto;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+
+  color: $color-default-white;
+}
+
+.promo-card--secondary .promo-card__title {
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-family: $ff-roboto;
+  font-weight: 700;
+  font-size: 26px;
+
+  color: $color-sapphire;
+}
+
+.promo-card__title span {
+  font-family: $ff-roboto;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 105%;
+
+  color: $color-default-white;
+}
+
+.promo-card--main .promo-card__description {
+  font-family: $ff-roboto;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+
+  color: $color-default-white;
+}
+
+.promo-card--secondary .promo-card__description {
+  margin: 0;
+
+  font-family: $ff-roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+
+  color: $color-sapphire;
+}
+
+.promo-card__link {
+  position: relative;
+  width: max-content;
+
+  font-family: $ff-roboto;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  transition: $trans-default;
+  user-select: none;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    bottom: -1px;
+    left: 0;
+    background-color: $color-default-white;
+
+    transition: $trans-default;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.promo-card--main .promo-card__link {
+  font-size: 14px;
+  line-height: 16px;
+
+  color: $color-default-white;
+
+  &:hover {
+    color: $color-sapphire;
+    transform: scale(110%);
+
+    &::after {
+      background-color: $color-sapphire;
+    }
+  }
+
+  &:focus,
+  &:focus-within {
+    outline: none;
+    color: $color-sapphire;
+    transform: scale(110%);
+
+    &::after {
+      background-color: $color-sapphire;
+    }
+  }
+}
+
+.promo-card--secondary .promo-card__link {
+  font-size: 12px;
+  line-height: 14px;
+  color: $color-sapphire;
+
+  &::after {
+    background-color: $color-sapphire;
+  }
+
+  &:hover {
+    color: $color-torch-red;
+    transform: scale(110%);
+
+    &::after {
+      background-color: $color-torch-red;
+    }
+  }
+
+  &:focus,
+  &:focus-within {
+    outline: none;
+    color: $color-torch-red;
+    transform: scale(110%);
+
+    &::after {
+      background-color: $color-torch-red;
+    }
+  }
+}
+
+.promo-card__image {
+  background-color: $color-royal-blue;
+  background-image: url("../img/woman.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dppx) and (min-width: $vp-1200) {
+    background-size: cover;
+    background-image: url("../img/woman@2x.webp");
+  }
+}
+
+.no-webp .promo-card__image {
+  background-image: url("../img/woman.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dppx) and (min-width: $vp-1200) {
+    background-size: cover;
+    background-image: url("../img/woman@2x.jpg");
+  }
+}
+
+@media (max-width: $tablet-max-width) {
+  .promo-card--main {
+    grid-template-columns: 279px 399px;
+    min-height: 462px;
+  }
+
+  .promo-card--secondary {
+    min-height: 211px;
+  }
+
+  .promo-card--secondary:first-child .promo-card__description {
+    max-width: 200px;
+  }
+
+  .promo-card__image {
+    background-image: url("../img/woman-tablet.webp");
+
+    @media (min-resolution: $retina-dppx) {
+      background-size: cover;
+      background-image: url("../img/woman-tablet@2x.webp");
+    }
+  }
+
+  .no-webp .promo-card__image {
+    background-image: url("../img/woman-tablet.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-size: cover;
+      background-image: url("../img/woman-tablet@2x.jpg");
+    }
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .promo-card--main {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: none;
+    min-height: 598px;
+  }
+
+  .promo-card__wrapper {
+    text-align: center;
+    align-items: center;
+  }
+
+  .promo-card--main .promo-card__title {
+    margin-bottom: -5px;
+  }
+
+  .promo-card--secondary {
+    padding-left: 0;
+    padding-top: 42px;
+    padding-bottom: 45px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .promo-card--secondary .promo-card__description {
+    max-width: 200px;
+  }
+}

@@ -1,0 +1,79 @@
+.promo__wrapper {
+  padding-top: 149px;
+  padding-bottom: 69px;
+}
+
+.promo__title {
+  margin: 0;
+  margin-bottom: 34px;
+
+  text-align: center;
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+
+  color: $color-sapphire;
+}
+
+.promo__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+
+  min-height: 462px;
+}
+
+.promo__cards-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 40px;
+}
+
+@media (max-width: $tablet-max-width) {
+  .promo__wrapper {
+    padding-top: 92px;
+    padding-bottom: 50px;
+  }
+
+  .promo__title {
+    margin-left: -7px;
+    margin-bottom: 40px;
+
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .promo__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .promo__cards-wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
+    column-gap: 30px;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .promo__wrapper {
+    padding-top: 56px;
+    padding-bottom: 35px;
+  }
+
+  .promo__title {
+    margin-bottom: 42px;
+
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .promo__cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}

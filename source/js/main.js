@@ -1,5 +1,12 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {scrollToBlock} from './modules/modals/scroll-to-block';
+import {playVideo} from './modules/modals/play-video';
+import {openTab} from './modules/modals/open-tab';
+import {runReviewsSlider, runStaffSlider} from './vendor';
+import {makeMaskForPhoneInputs} from './modules/modals/phone-mask';
+import {checkSupport} from './modules/modals/check-webp-support';
+
 
 // ---------------------------------
 
@@ -12,6 +19,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+
+  checkSupport();
+  scrollToBlock();
+  playVideo();
+  openTab();
+  runStaffSlider();
+  runReviewsSlider();
+  makeMaskForPhoneInputs();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
