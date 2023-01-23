@@ -826,6 +826,7 @@ button,
   padding-top: 51px;
   padding-left: 19px;
   padding-right: 200px;
+  padding-bottom: 51px;
 }
 
 .intro__text-wrapper {
@@ -2485,6 +2486,11 @@ button,
 .contact a {
   position: relative;
   padding-bottom: 2px;
+}
+
+.contact a:focus,
+.contact a:focus-within {
+  outline: none;
 }
 
 .contact a::before {

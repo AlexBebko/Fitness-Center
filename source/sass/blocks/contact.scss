@@ -25,6 +25,11 @@
 .contact a {
   position: relative;
   padding-bottom: 2px;
+
+  &:focus,
+  &:focus-within {
+    outline: none;
+  }
 }
 
 .contact a::before {
