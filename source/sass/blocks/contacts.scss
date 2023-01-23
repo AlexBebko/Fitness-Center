@@ -1,8 +1,8 @@
 .contacts__wrapper {
-  max-width: inherit;
+  max-width: 1366px;
   min-height: 337px;
 
-  margin: 0;
+  // margin: 0 auto;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -46,6 +46,7 @@
   row-gap: 36px;
 
   border-top: 1px solid $color-light-slate-grey;
+  border-right: 1px solid $color-light-slate-grey;
 }
 
 .contacts__list-title {

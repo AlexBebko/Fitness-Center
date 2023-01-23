@@ -169,27 +169,20 @@
 }
 
 .promo-card__image {
+  width: 280px;
+  height: 462px;
+  overflow: hidden;
   background-color: $color-royal-blue;
-  background-image: url("../img/woman.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  @media (min-resolution: $retina-dppx) and (min-width: $vp-1200) {
-    background-size: cover;
-    background-image: url("../img/woman@2x.webp");
-  }
 }
 
-.no-webp .promo-card__image {
-  background-image: url("../img/woman.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  @media (min-resolution: $retina-dppx) and (min-width: $vp-1200) {
-    background-size: cover;
-    background-image: url("../img/woman@2x.jpg");
-  }
+.promo-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 1% -38px;
+  transform: scale(123%);
 }
+
 
 @media (max-width: $tablet-max-width) {
   .promo-card--main {
@@ -206,21 +199,12 @@
   }
 
   .promo-card__image {
-    background-image: url("../img/woman-tablet.webp");
-
-    @media (min-resolution: $retina-dppx) {
-      background-size: cover;
-      background-image: url("../img/woman-tablet@2x.webp");
-    }
+    width: 399px;
   }
 
-  .no-webp .promo-card__image {
-    background-image: url("../img/woman-tablet.jpg");
-
-    @media (min-resolution: $retina-dppx) {
-      background-size: cover;
-      background-image: url("../img/woman-tablet@2x.jpg");
-    }
+  .promo-card__image img {
+    object-position: 27px -56px;
+    transform: scale(119%);
   }
 }
 
@@ -250,5 +234,20 @@
 
   .promo-card--secondary .promo-card__description {
     max-width: 200px;
+  }
+
+  .promo-card__image {
+    position: relative;
+    width: 100%;
+    height: 299px;
+    padding-top: 96%;
+  }
+
+  .promo-card__image img {
+    position: relative;
+    margin-top: -96%;
+    height: inherit;
+    object-position: 19px -42px;
+    transform: scale(120%);
   }
 }

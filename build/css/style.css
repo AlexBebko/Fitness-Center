@@ -1486,16 +1486,6 @@ button,
   background-color: #b6bdcc;
 }
 
-.contest__image {
-  background: url("../img/super-gamer.webp");
-  background-color: #07004e;
-}
-
-.no-webp .contest__image {
-  background: url("../img/super-gamer.jpg");
-  background-color: #07004e;
-}
-
 .staff__wrapper {
   position: relative;
   padding-top: 46px;
@@ -1568,22 +1558,6 @@ button,
   background-size: cover;
 }
 
-.staff__item--anna {
-  background-image: url("../img/anna.webp");
-}
-
-.staff__item--alexey {
-  background-image: url("../img/alexey.webp");
-}
-
-.staff__item--alex {
-  background-image: url("../img/alex.webp");
-}
-
-.staff__item--mary {
-  background-image: url("../img/mary.webp");
-}
-
 .staff__item:hover::after {
   position: absolute;
   content: "";
@@ -1594,26 +1568,12 @@ button,
   background-color: rgba(16, 38, 84, 0.89);
 }
 
-.no-webp .staff__item {
-  height: 294px;
-  width: 260px;
-  background-size: cover;
-}
-
-.no-webp .staff__item--anna {
-  background-image: url("../img/anna.jpg");
-}
-
-.no-webp .staff__item--alexey {
-  background-image: url("../img/alexey.jpg");
-}
-
-.no-webp .staff__item--alex {
-  background-image: url("../img/alex.jpg");
-}
-
-.no-webp .staff__item--mary {
-  background-image: url("../img/mary.jpg");
+.staff__item img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 .staff__item h3 {
@@ -2097,16 +2057,22 @@ button,
 }
 
 .promo-card__image {
+  width: 280px;
+  height: 462px;
+  overflow: hidden;
   background-color: #3e7bd0;
-  background-image: url("../img/woman.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
-.no-webp .promo-card__image {
-  background-image: url("../img/woman.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+.promo-card__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 1% -38px;
+  object-position: 1% -38px;
+  -webkit-transform: scale(123%);
+  -ms-transform: scale(123%);
+  transform: scale(123%);
 }
 
 .reviews__wrapper {
@@ -2224,9 +2190,8 @@ button,
 }
 
 .contacts__wrapper {
-  max-width: inherit;
+  max-width: 1366px;
   min-height: 337px;
-  margin: 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -2271,6 +2236,7 @@ button,
   align-items: flex-start;
   row-gap: 36px;
   border-top: 1px solid #74819c;
+  border-right: 1px solid #74819c;
 }
 
 .contacts__list-title {
@@ -2592,6 +2558,7 @@ button,
   display: inline-block;
   padding: 3px 0;
   margin-right: 40px;
+  vertical-align: middle;
   font-family: "Roboto Condensed", "Courier", monospace;
   font-weight: 400;
   font-size: 14px;
@@ -2766,26 +2733,6 @@ button,
     background: url("../img/discs-150@2x.png");
     background-size: cover;
     background-repeat: no-repeat;
-  }
-
-  .contest__image {
-    background: url("../img/super-gamer@2x.webp");
-    background-size: cover;
-  }
-
-  .no-webp .contest__image {
-    background: url("../img/super-gamer@2x.jpg");
-    background-size: cover;
-  }
-
-  .promo-card__image {
-    background-size: cover;
-    background-image: url("../img/woman@2x.webp");
-  }
-
-  .no-webp .promo-card__image {
-    background-size: cover;
-    background-image: url("../img/woman@2x.jpg");
   }
 }
 
@@ -3095,15 +3042,6 @@ button,
     line-height: 12px;
   }
 
-  .contest__image {
-    background: url("../img/super-gamer-tablet.webp");
-  }
-
-  .no-webp .contest__image {
-    background: url("../img/super-gamer-tablet.jpg");
-    background-color: #07004e;
-  }
-
   .staff__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3151,6 +3089,11 @@ button,
     width: 268px;
     height: 294px;
     background-size: cover;
+  }
+
+  .staff__item img {
+    width: 268px;
+    height: 294px;
   }
 
   .benefits {
@@ -3306,11 +3249,15 @@ button,
   }
 
   .promo-card__image {
-    background-image: url("../img/woman-tablet.webp");
+    width: 399px;
   }
 
-  .no-webp .promo-card__image {
-    background-image: url("../img/woman-tablet.jpg");
+  .promo-card__image img {
+    -o-object-position: 27px -56px;
+    object-position: 27px -56px;
+    -webkit-transform: scale(119%);
+    -ms-transform: scale(119%);
+    transform: scale(119%);
   }
 
   .reviews__wrapper {
@@ -3331,7 +3278,7 @@ button,
   }
 
   .reviews__button {
-    top: 48%;
+    top: 52%;
   }
 
   .reviews__button--prev {
@@ -3473,26 +3420,6 @@ button,
     background: url("../img/discs-150-tablet@2x.png");
     background-size: cover;
     background-repeat: no-repeat;
-  }
-
-  .contest__image {
-    background: url("../img/super-gamer-tablet@@2x.webp");
-    background-size: cover;
-  }
-
-  .no-webp .contest__image {
-    background: url("../img/super-gamer-tablet@2x.jpg");
-    background-size: cover;
-  }
-
-  .promo-card__image {
-    background-size: cover;
-    background-image: url("../img/woman-tablet@2x.webp");
-  }
-
-  .no-webp .promo-card__image {
-    background-size: cover;
-    background-image: url("../img/woman-tablet@2x.jpg");
   }
 }
 
@@ -3724,25 +3651,46 @@ button,
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -ms-grid-columns: 290px;
-    grid-template-columns: 290px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
     -ms-grid-rows: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding-top: 70px;
     padding-bottom: 35px;
   }
 
-  .contest__text-wrapper {
-    padding: 50px 44px;
+  .contest__info-wrapper {
+    margin: 0 auto;
+    margin-bottom: -1px;
+  }
+
+  .contest__info {
+    text-align: center;
+    margin-right: 15px;
+    margin-bottom: auto;
   }
 
   .contest__image {
-    background: url("../img/super-gamer-mobile.jpg");
+    width: 100%;
+    height: 100%;
+    background-color: #07004e;
+    overflow: hidden;
   }
 
-  .no-webp .contest__image {
-    background: url("../img/super-gamer-mobile.jpg");
-    background-color: #07004e;
+  .contest__image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 48% 20px;
+    object-position: 48% 20px;
+    -webkit-transform: scale(116%);
+    -ms-transform: scale(116%);
+    transform: scale(116%);
+  }
+
+  .contest__text-wrapper {
+    padding: 50px 44px;
   }
 
   .staff__wrapper {
@@ -3782,6 +3730,11 @@ button,
     height: 274px;
     padding-bottom: 16px;
     background-size: cover;
+  }
+
+  .staff__item img {
+    width: 226px;
+    height: 274px;
   }
 
   .staff__item ul {
@@ -3934,6 +3887,24 @@ button,
 
   .promo-card--secondary .promo-card__description {
     max-width: 200px;
+  }
+
+  .promo-card__image {
+    position: relative;
+    width: 100%;
+    height: 299px;
+    padding-top: 96%;
+  }
+
+  .promo-card__image img {
+    position: relative;
+    margin-top: -96%;
+    height: inherit;
+    -o-object-position: 19px -42px;
+    object-position: 19px -42px;
+    -webkit-transform: scale(120%);
+    -ms-transform: scale(120%);
+    transform: scale(120%);
   }
 
   .reviews__wrapper {
@@ -4143,49 +4114,5 @@ button,
   .no-webp .about__video-wrapper {
     background: url("../img/poster-mobile@2x.jpg");
     background-size: cover;
-  }
-
-  .contest__image {
-    background: url("../img/super-gamer-mobile@2x.webp");
-    background-size: cover;
-  }
-
-  .no-webp .contest__image {
-    background: url("../img/super-gamer-mobile@2x.jpg");
-    background-size: cover;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
-  .staff__item--anna {
-    background-image: url("../img/anna@2x.webp");
-  }
-
-  .staff__item--alexey {
-    background-image: url("../img/alexey@2x.webp");
-  }
-
-  .staff__item--alex {
-    background-image: url("../img/alex@2x.webp");
-  }
-
-  .staff__item--mary {
-    background-image: url("../img/mary@2x.webp");
-  }
-
-  .no-webp .staff__item--anna {
-    background-image: url("../img/anna@2x.jpg");
-  }
-
-  .no-webp .staff__item--alexey {
-    background-image: url("../img/alexey@2x.jpg");
-  }
-
-  .no-webp .staff__item--alex {
-    background-image: url("../img/alex@2x.jpg");
-  }
-
-  .no-webp .staff__item--mary {
-    background-image: url("../img/mary@2x.jpg");
   }
 }

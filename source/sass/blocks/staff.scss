@@ -72,37 +72,6 @@
   padding-bottom: 26px;
   background-size: cover;
 
-  &--anna {
-    background-image: url("../img/anna.webp");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/anna@2x.webp");
-    }
-  }
-
-  &--alexey {
-    background-image: url("../img/alexey.webp");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/alexey@2x.webp");
-    }
-  }
-
-  &--alex {
-    background-image: url("../img/alex.webp");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/alex@2x.webp");
-    }
-  }
-
-  &--mary {
-    background-image: url("../img/mary.webp");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/mary@2x.webp");
-    }
-  }
 
   &:hover {
     &::after {
@@ -117,42 +86,12 @@
   }
 }
 
-.no-webp .staff__item {
-  height: 294px;
-  width: 260px;
-  background-size: cover;
-
-  &--anna {
-    background-image: url("../img/anna.jpg");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/anna@2x.jpg");
-    }
-  }
-
-  &--alexey {
-    background-image: url("../img/alexey.jpg");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/alexey@2x.jpg");
-    }
-  }
-
-  &--alex {
-    background-image: url("../img/alex.jpg");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/alex@2x.jpg");
-    }
-  }
-
-  &--mary {
-    background-image: url("../img/mary.jpg");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/mary@2x.jpg");
-    }
-  }
+.staff__item img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 .staff__item h3 {
@@ -254,6 +193,11 @@
     height: 294px;
     background-size: cover;
   }
+
+  .staff__item img {
+    width: 268px;
+    height: 294px;
+  }
 }
 
 @media (max-width: $mobile-max-width) {
@@ -295,6 +239,11 @@
     height: 274px;
     padding-bottom: 16px;
     background-size: cover;
+  }
+
+  .staff__item img {
+    width: 226px;
+    height: 274px;
   }
 
   .staff__item ul {
