@@ -1009,6 +1009,7 @@ button,
   height: 228px;
   bottom: 120px;
   left: 436px;
+  background-color: rgba(16, 38, 84, 0.89);
   background-image: url("../img/poster.webp");
 }
 
