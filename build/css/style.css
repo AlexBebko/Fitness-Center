@@ -2562,10 +2562,8 @@ button,
 
 .footer-nav__link {
   position: relative;
-  display: inline-block;
   padding: 3px 0;
   margin-right: 40px;
-  vertical-align: middle;
   font-family: "Roboto Condensed", "Courier", monospace;
   font-weight: 400;
   font-size: 14px;
