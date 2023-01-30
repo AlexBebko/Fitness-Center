@@ -190,18 +190,6 @@
     left: 0;
   }
 
-  .staff__button {
-    top: 50%;
-
-    &--prev {
-      left: -7px;
-    }
-
-    &--next {
-      right: -7px;
-    }
-  }
-
   .staff__item {
     width: 268px;
     height: 294px;
@@ -239,14 +227,14 @@
   }
 
   .staff__button {
-    top: 49%;
+    top: 47%;
 
     &--prev {
-      left: -7px;
+      left: -39px;
     }
 
     &--next {
-      right: -6px;
+      right: -39px;
     }
   }
 

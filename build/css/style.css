@@ -3976,18 +3976,6 @@ button,
     left: 0;
   }
 
-  .staff__button {
-    top: 50%;
-  }
-
-  .staff__button--prev {
-    left: -7px;
-  }
-
-  .staff__button--next {
-    right: -7px;
-  }
-
   .staff__item {
     width: 268px;
     height: 294px;
@@ -4656,15 +4644,15 @@ button,
   }
 
   .staff__button {
-    top: 49%;
+    top: 47%;
   }
 
   .staff__button--prev {
-    left: -7px;
+    left: -39px;
   }
 
   .staff__button--next {
-    right: -6px;
+    right: -39px;
   }
 
   .staff__ratio-wrapper {
