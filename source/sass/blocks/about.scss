@@ -9,6 +9,7 @@
   min-height: 756px;
   padding-top: 120px;
   padding-left: 60px;
+  padding-bottom: 120px;
 }
 
 .about__wrapper img {
@@ -65,8 +66,8 @@
   position: absolute;
   width: 364px;
   height: 228px;
-  bottom: 120px;
-  left: 436px;
+  top: 408px;
+  left: 437px;
   background-color: $color-sapphire-89;
   background-image: url("../img/poster.webp");
 
@@ -101,6 +102,12 @@
   &:hover {
     cursor: pointer;
     background-size: 120px 120px;
+  }
+
+  &:focus,
+  &:focus-within {
+    background-size: 120px 120px;
+    outline: none;
   }
 }
 
@@ -167,6 +174,7 @@
   .about__video-wrapper {
     bottom: 100px;
     left: 206px;
+    top: auto;
     width: 266px;
     height: 167px;
     background-size: cover;

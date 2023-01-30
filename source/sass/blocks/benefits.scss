@@ -1,18 +1,18 @@
 .benefits {
   background-color: $color-ghost-white;
-  margin-left: 33px;
 }
 
 .benefits__wrapper {
   max-width: 1040px;
   min-height: 664px;
   padding-top: 146px;
-  padding-bottom: 91px;
+  padding-bottom: 87px;
+  padding-left: 16px;
 }
 
 .benefits__title {
   margin: 0;
-  margin-right: 22px;
+  margin-right: 7px;
   margin-bottom: 55px;
 
   text-align: center;
@@ -35,9 +35,9 @@
   grid-template-areas:
     "empty simulators parking"
     "comfort simulators experience";
-  grid-template-columns: 340px 240px 340px;
-  grid-template-rows: 153px 153px;
-  column-gap: 60px;
+  grid-template-columns: 1fr 0.72fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 57px;
 
   list-style: none;
 
@@ -90,12 +90,14 @@
 
   .benefits__wrapper {
     min-height: 755px;
+    padding-left: 0;
     padding-top: 91px;
     padding-bottom: 100px;
   }
 
   .benefits__title {
     margin-bottom: 50px;
+    margin-right: 22px;
 
     font-size: 42px;
     line-height: 50px;

@@ -6,6 +6,7 @@
 
   padding: 0;
   margin: 0;
+  margin-left: auto;
   list-style: none;
 }
 
@@ -51,10 +52,14 @@
   transform: translate(-50%, -50%);
 }
 
-// @media (max-width: $tablet-max-width) {
+@media (max-width: $tablet-max-width) {
+  .socials {
+    margin-right: -5px;
+  }
+}
 
-// }
-
-// @media (max-width: $mobile-max-width) {
-
-// }
+@media (max-width: $mobile-max-width) {
+  .socials {
+    margin-left: 0;
+  }
+}

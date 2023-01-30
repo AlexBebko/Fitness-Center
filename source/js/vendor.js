@@ -18,7 +18,7 @@ function runStaffSlider() {
       },
       breakpoints: {
         320: {
-          slidesPerView: 1,
+          slidesPerView: 'auto',
           spaceBetween: 0,
         },
         768: {
@@ -38,7 +38,7 @@ function runStaffSlider() {
 function runReviewsSlider() {
   if (reviewsSlider) {
     const swiper = new Swiper(reviewsSlider, {
-      slidesPerView: 1,
+      slidesPerView: 'auto',
       slidesPerGroup: 1,
       loop: false,
       navigation: {

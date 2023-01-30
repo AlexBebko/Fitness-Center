@@ -6,9 +6,14 @@
 .main-header__wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 
   margin-top: 30px;
+}
+
+.main-header__logo {
+  margin-right: auto;
 }
 
 .main-header__logo svg {
@@ -17,6 +22,7 @@
 
 .main-header__phone {
   position: relative;
+  margin-left: 10px;
   font-family: $ff-alumni;
   font-weight: 600;
   font-size: 26px;
@@ -89,6 +95,7 @@
 
 @media (max-width: $mobile-max-width) {
   .main-header__wrapper {
+    justify-content: flex-end;
     margin-top: 15px;
   }
 

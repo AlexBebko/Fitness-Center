@@ -1,8 +1,6 @@
 .contacts__wrapper {
-  max-width: 1366px;
+  max-width: 100%;
   min-height: 337px;
-
-  // margin: 0 auto;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -11,12 +9,16 @@
 // Form
 
 .contacts__form-wrapper {
-  padding-left: 15%;
   padding-top: 56px;
   padding-right: 24.9%;
   padding-bottom: 70px;
 
   background-color: $color-sapphire;
+}
+
+.contacts__form-container {
+  max-width: 410px;
+  margin-left: auto;
 }
 
 .contacts__form-title {
@@ -37,7 +39,7 @@
 .contacts__list-wrapper {
   padding-top: 57px;
   padding-left: 17.8%;
-  padding-right: 23%;
+  padding-bottom: 20px;
 
   display: flex;
   flex-direction: column;
@@ -46,7 +48,6 @@
   row-gap: 36px;
 
   border-top: 1px solid $color-light-slate-grey;
-  border-right: 1px solid $color-light-slate-grey;
 }
 
 .contacts__list-title {
@@ -71,7 +72,7 @@
     position: absolute;
     content: "";
     width: 1px;
-    height: 102px;
+    height: 88%;
     top: 0;
     right: 42%;
     margin-top: 6px;
@@ -116,6 +117,11 @@
     padding-bottom: 70px;
   }
 
+  .contacts__form-container {
+    max-width: 472px;
+    margin: 0 auto;
+  }
+
   .contacts__form-title {
     margin-bottom: 32px;
 
@@ -128,12 +134,14 @@
   // Contacts List
 
   .contacts__list-wrapper {
+    margin: 0 auto;
     padding-top: 62px;
-    padding-left: 17.3%;
+    padding-left: 15.3%;
     padding-right: 21.2%;
-    padding-bottom: 60px;
+    padding-bottom: 55px;
 
     row-gap: 33px;
+    border-top: none;
   }
 
   .contacts__list-title {
@@ -145,7 +153,7 @@
     column-gap: 96px;
 
     &::after {
-      height: 129px;
+      height: 86%;
       right: 41%;
       margin-top: 7px;
     }
@@ -183,6 +191,8 @@
   // Contacts List
 
   .contacts__list-wrapper {
+    margin: 0;
+
     padding-top: 63px;
     padding-left: 15px;
     padding-right: 15px;
@@ -199,7 +209,7 @@
   .contacts__lists-container {
     display: flex;
     flex-direction: column;
-    row-gap: 17px;
+    row-gap: 12px;
 
     &::after {
       content: none;

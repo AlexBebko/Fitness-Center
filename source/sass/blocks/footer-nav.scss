@@ -1,9 +1,6 @@
 .footer-nav__list {
   display: flex;
-
-  &:last-child {
-    margin-right: 229px;
-  }
+  flex-wrap: wrap;
 }
 
 .footer-nav__link {
@@ -51,12 +48,6 @@
 }
 
 @media (max-width: $tablet-max-width) {
-  .footer-nav__list {
-    &:last-child {
-      margin-right: 25px;
-    }
-  }
-
   .footer-nav__link {
     margin-right: 30px;
   }

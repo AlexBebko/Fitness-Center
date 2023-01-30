@@ -27,7 +27,7 @@
 
 .promo__cards-wrapper {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: max-content max-content;
   row-gap: 40px;
 }
 
@@ -65,7 +65,7 @@
   }
 
   .promo__title {
-    margin-bottom: 42px;
+    margin-bottom: 44px;
 
     font-size: 32px;
     line-height: 38px;
